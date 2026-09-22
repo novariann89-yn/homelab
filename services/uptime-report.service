@@ -1,0 +1,14 @@
+# Systemd Service File
+
+```ini
+[Unit]
+Description=Write uptime report
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/uptime-report.sh
+
+[Install]
+WantedBy=multi-user.target
+```
